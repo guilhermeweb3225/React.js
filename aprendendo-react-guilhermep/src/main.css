@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bokor&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bokor&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Jost",sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  color: #292f29;
+  background-color: white;
+}
+a{
+  text-decoration: none;
+}
+
+/*MAIN Color*/
+.primary-background{
+  background-color: #0c70f2;
+}
+.primary-color{
+  color: #0c70f2;
+}
+
+
+.secondary-background{
+  background-color: #1d1d1d;
+}
+.secondary-color{
+  color: #1d1d1d;
+}
+
+
+.tertiary-background{
+  background-color: #f6f6f6;
+}
+.tertiary-color{
+  color: #f6f6f6;
+}
+
+/*Grid*/
+
+.conteiner{
+  margin: 0 auto;
+  width: 100%;
+  max-height: 1140px;
+  position: relative;
+  padding: 0 30px;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.align-end{
+  align-items: end;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-end{
+  justify-content: end;
+}
+
+.justify-space-between{
+  justify-content: space-between;
+}
+.justify-space-around{
+  justify-content: space-around;
+}
+
+.display-flex{
+  display: flex;
+}
+
+.flex-direction-column{
+  flex-direction: column;
+}
+.grid-template-column{
+  grid-template-columns: repeat(3);
+}
+
+@media screen and (max-width:768px){
+  .container{
+    width: 90%;
+  }
+
+  .mobile-flex-column{
+    flex-direction: column;
+  }
+} 

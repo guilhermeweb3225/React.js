@@ -1,0 +1,89 @@
+header{
+    background-color: white;
+    padding: 50px 0 50px 0px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+header ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.div-princip{
+    width: 100%;
+}
+nav a{
+    color:#1d1d1d;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 0 0 50px;
+}
+nav a:hover{
+    color: #0c70f2;
+}
+.mobileMenu{
+    display: none;
+}
+
+@media screen and (max-width:800px){
+    nav.open{
+        transition: 500ms;
+        align-items: end;
+        display: flex;
+}
+    nav{
+        transition: 500ms;
+        background-color: #1d1d1d;
+        border: 10px solid #333333;
+        display: none;
+        flex-direction: column;
+        height: 100%;
+        padding: 37px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 40%;
+        z-index: 1;
+        box-shadow: -50px 0 0 0 #000000b6;
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li{
+        display: flex;
+        width: 100%;
+    }
+    nav a{
+        border-bottom: 1px solid white;
+        color: white;
+        font-size: 20px;
+        margin: 0 0 10px 0;
+        padding: 12px;
+        text-decoration: none;
+        width: 100%;
+        z-index: 1;
+    }
+    .mobileMenu{
+        display: block;
+    }
+    .closeBTN{
+        background: none;
+        border: none;
+        color: white;
+        font-size: 25px;
+        margin: 0 0 12px;
+        padding: 12px;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width:500px) {
+    nav{
+        width: 60%;
+        padding: 5px;
+        box-shadow: -10px 0 0 0 #00000073;
+    }
+}

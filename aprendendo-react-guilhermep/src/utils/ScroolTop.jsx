@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 const scroolTop =  ()=>{
-    const {voltarTop} = useLocation()
+    const {pathname} = useLocation()
     useEffect(()=>{
         window.scrollTo(0,0)
-    },[voltarTop])
+    },[pathname])
     return null;
 }
 export default scroolTop

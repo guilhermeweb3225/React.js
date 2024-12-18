@@ -23,11 +23,15 @@
     justify-content: start;
     flex-direction: column;
     width: 66%;
-    height: 403px;
+    height: auto;
     margin-top: 50px;
     gap: 10px;
     color: #292F36;
     transition:500ms;
+}
+.form{
+    width: 100%;
+    height: 100%;
 }
 .dvInputs{
     width: 100%;
@@ -69,6 +73,11 @@
     height: auto;
     display: flex;
     justify-content: end;
+}
+#bt{
+    height: 78px;
+    padding: 12px 57px;
+    margin-top: 4px;
 }
 @media screen and (max-width:1300px){
     .dvBox1{

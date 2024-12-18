@@ -37,8 +37,8 @@
 }
 /*disabled*/
 .button:disabled,.button:disabled>:hover{
-    background-color: white;
-    color: #666;
+    background-color: #88888894;
+    color: #5c5c5c;
     pointer-events: none;
 }
 *{

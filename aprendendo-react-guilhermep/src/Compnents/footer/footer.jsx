@@ -1,3 +1,4 @@
+import {useContext} from 'react'
 import {Link} from 'react-router-dom'
 //assets
 import './footer.css'
@@ -8,13 +9,19 @@ import face from '../../assets/face-icon.svg'
 import insta from '../../assets/insta.svg'
 import linke from '../../assets/linke.svg'
 import twiter from '../../assets/twiter.svg'
+//CONTEXT
+import { AppContext } from "../../contexts/Context"
 function footer(){
+    const appContext= useContext(AppContext)
+    const mudarLingua=(pais)=>{
+        appContext.setLanguage(pais)
+    }
     return(
         <footer>
             <div className="conteiner element-pai-footer grid-template-colum justify-space-between">
                 <div className="element-pai-media">
                     <Link to="/"><img src={logo}/></Link>
-                    <p>A escola que prepara você para as profissões em alta no mercado de trabalho.</p>
+                    <p>{appContext.languages[appContext.language].general.footerLogoText}</p>
                     <div className="display-flex align-center justify-space-between social-media">
                         <a href="#" target="_blank"><img src={face} /></a>
                         <a href="#" target="_blank"><img src={insta} /></a>
@@ -23,14 +30,14 @@ function footer(){
                     </div>
                 </div>
                 <div className="Pages-footer">
-                    <h2>Pages</h2>
+                    <h2>{appContext.languages[appContext.language].general.pages}</h2>
                     <Link to="/">Home</Link>
                     <Link to="/About">About</Link>
                     <Link to="/Contact">Contact</Link>
                     <Link to="/Projects">Projects</Link>
                 </div>
                 <div className="conatato">
-                    <h2>Contact</h2>
+                    <h2>{appContext.languages[appContext.language].general.contact}</h2>
                     <p>R. Justino Cobra, 61 – Vila Ema | São José dos Campos – SP | CEP 12243-030 
                     </p>
                     <p>suporte@escoladnc.com.br</p>
@@ -39,8 +46,8 @@ function footer(){
             </div>
             <div className="copy">
                 <p>Copyright © DNC - 2024</p>
-                <Link to="/"><img src={brasil} /></Link>
-                <Link to="/"><img src={usa} /></Link>
+                <Link ><img src={brasil} onClick={()=>mudarLingua('br')}/></Link>
+                <Link ><img src={usa} onClick={()=>mudarLingua('en')}/></Link>
             </div>
         </footer>
     )

@@ -1,11 +1,17 @@
+import {useContext} from 'react'
 import { useState, useEffect } from 'react';
 import './ProjectList.css'
 import likeWhite from "../../assets/like-white.svg"
 import likeBlack from "../../assets/like-black.svg"
 //chamando APIs
 import { APIsService } from "../../APIs/APIsService"
-
+//CONTEXT
+import { AppContext } from '../../contexts/Context';
 function ProjectList() {
+  const appContext=useContext(AppContext)
+  const mudarLiguage=(pais)=>{
+      appContext.setLanguages(pais)
+  }
   const [projects, setProjects] = useState([]); // Inicializa com um array vazio
 
   useEffect(() => {
@@ -26,8 +32,8 @@ function ProjectList() {
     <div className="projectsList display-flex align-center flex-direction-column justify-center">
       <div className="projectsTest">
         <div className="textP">
-          <h2>Follow Our Projects</h2>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page looking at its layout points.</p>
+          <h2> {appContext.languages[appContext.language].projects.title}</h2>
+          <p>{appContext.languages[appContext.language].projects.subtitle}</p>
         </div>
       </div>
       <div className="cardsProject">

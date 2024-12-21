@@ -1,7 +1,14 @@
+import {useContext} from 'react'
 import { useState,useEffect } from "react"
 import Button from "../button/button"
 import './ContactForm.css'
+//CONTEXT
+import {AppContext} from '../../contexts/Context'
 function ContactForm(){
+    const appContext=useContext(AppContext)
+    const mudarLiguage=(pais)=>{
+        appContext.setLanguages(pais)
+    }
     const [dadosForm,setDadosForm]=useState({
         name:"",
         email:"",
@@ -57,7 +64,7 @@ function ContactForm(){
     return(
         <div className="dvBox1">
             <div className="dvBox2">
-                <h2>We love meeting new people and helping them.</h2>
+                <h2>{appContext.languages[appContext.language].contact.title}</h2>
             </div>
             <div className="dvBox3">
                 <form className="form"onSubmit={indentificadorSubmit}>
